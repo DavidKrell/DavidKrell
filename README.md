@@ -4,6 +4,7 @@
 
 - 📫 How to reach me: ...
 
+:bar_chart: Weekly development breakdown
 <!--START_SECTION:waka-->
 
 ```text
