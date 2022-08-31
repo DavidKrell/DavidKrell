@@ -5,6 +5,12 @@
 - 📫 How to reach me: ...
 
 <!--START_SECTION:waka-->
+
+```text
+Java             3 hrs 43 mins   ████████████████████████▓   98.92 %
+GitIgnore file   2 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.08 %
+```
+
 <!--END_SECTION:waka-->
 <!--
 **DavidKrell/DavidKrell** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
