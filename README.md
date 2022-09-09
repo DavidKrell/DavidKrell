@@ -8,8 +8,9 @@
 <!--START_SECTION:waka-->
 
 ```text
-Java             41 hrs 35 mins  █████████████████████████   99.90 %
-GitIgnore file   2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.10 %
+Java             32 hrs 35 mins  ████████████████████████▓   98.96 %
+Racket           17 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.91 %
+GitIgnore file   2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.13 %
 ```
 
 <!--END_SECTION:waka-->
