@@ -1,105 +1,92 @@
 <svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          outline: none;
-          font-family: monospace;
-        }
+  	<foreignObject width="100%" height="100%">
+    	<div xmlns="http://www.w3.org/1999/xhtml">
+      		<style>
+        		$chWidth: 0.49em;
+        		$chCount: 22;
+        		$typeDuration: 180ms *
+        		$chCount;
 
-        body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min height: 100vh;
-          background: transparent;
-        }
+        		$color: slateblue;
+        		$bg: #f7f3ff;
+        		$cursor: scale-color($color, lightness: -60%);
 
-        .container {
-          position: relative;
-          max-width: 600px;
-          height: 500px;
-          padding: 50px;
-          color: #555;
-        }
+        		body {
+        			display: grid;
+        			place-items: center;
+        			min-height: 100vh;
+        			background-color: $bg;
+        			color: $color;
+        			font-family: Monospace;
+        		} 
 
-        .container .content {
-          margin-top: 2rem;
-        }
+        		h1 {
+        			font-size: 4.5rem;
+        			text-align: center;
+        		}
 
-        .container .contentEng {
-          display: block;
-        }
+        		.type-animation {
+        			display: inline-flex;
+        			width: 0;
+        			overflow: hidden;
+        			padding-right: 0.08em;
+        			position: relative;
 
-        .contaianer .contentGer {
-          display: none;
-        }
+        			&:after {
+        				contetn: "";
+        				background: $bg;
+        				position: absolute;
+        				right: 0;
+        				top: -0.05em;
+        				bottom: -0.05em;
+        				width: 0.08em;
+        				border-right: 2px solid transparent;
+        			}
 
-        .check::before {
-          content: "";
-          position: absolute;
-          width: 50px;
-          height: 25px;
-          background: #333;
-          border-radius: 25px;
-        }
+        			&.animating {
+						animation: type $typeDuration;
+						animation-fill-mode: forwards;
+						animation-delay: 1s;
 
-        .check:checked::before {
-          background: 00a1ff;
-        }
+						&:after {
+							$cursorLoopCount: ((($chCount + 1) * 180)/320) + 3;
+							animation: cursor 320ms $cursorLoopCount ease-in-out;
+						}
+					}
+        		}
 
-        .check::after {
-          content: "";
-          position: absolute;
-          left: 0px;
-          width: 25px;
-          height: 25px;
-          background: #fff;
-          border-radius: 25px;
-          transition: 0.25s;
-          border: 2px solid #333;
-          box-sizing: border-box;
-        }
+        		@keyframes cursor {
+					0%,
+					100% {
+						border-color: $bg;
+					}
+					50% {
+						border-color: $cursor;
+					}
+					100% {
+						width: 0;
+					}
+				}
 
-        .check:checked::after {
-          left: 25px;
-          border: 2px solid #00a1ff;
-        }
+				$frameSize: 100 / $chCount;
+				@keyframes type {
+					@for $ch from 1 to $chCount {
+						$frame: $ch * $frameSize;
+						#{$frame}% {
+							width: $ch * $chWidth;
+						}
+					}
+					100% {
+						width: ($chCount - 1) * $chWidth;
+						padding-right: 0;
+					}
+				}
 
-        .check:checked ~
-        .content.contentGer {
-          display: block;
-        }
+      		</style>
 
-        .en {
-          color: #333;
-        }
-
-        .hn {
-          color: red;
-        }
-      </style>
-
-<div class="container">
-      <span class="en">Eng</span>
-      <input type="checkbox" class="check" />
-      <span class="en">Ger</span>
-      <div class="content contentEng">
-        <h2>English</h2>
-        <p>
-          fhuehwhfewuifhewuhf
-        </p>
-      </div>
-      <div class="content contentGer">
-        <h2>German</h2>
-        <p>
-          hihigfhihihi
-        </p>
-      </div>
-    </div>
-    </div>
-  </foreignObject>
+      		<h1>
+      			<span class="type-animation animating">Welcome to my profile!</span>
+      		</h1>
+    	</div>
+  	</foreignObject>
 </svg>
