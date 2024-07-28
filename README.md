@@ -1,3 +1,1 @@
-<div style="width: 100%;">
-    <img src="test.svg" style="width: 100%" alt="Welcome Animation" >
-</div>
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
