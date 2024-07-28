@@ -1,21 +1,9 @@
-<svg viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .text {
-      font: 18px monospace;
-      white-space: pre;
-      overflow: hidden;
-      border-right: 2px solid;
-      animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
-    }
+<svg width="100%" height="100%" viewBox="30 -50 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+	<path id="path">
+    	<animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/>
+  	</path>
 
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-  </style>
-  <text x="10" y="50" class="text">Welcome to my profile!</text>
+  	<text font-size="26" font-family="Monospace" fill='hsla(36, 95%, 85%, 1)'>
+    	<textPath xlink:href="#path">Welcome to my profile!</textPath>
+  	</text>
 </svg>
