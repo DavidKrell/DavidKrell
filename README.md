@@ -4,4 +4,4 @@
 
 I am currently studying computer science at the Philipps Universität Marburg. My main interest lies in the development and research of DNA storage systems as a solution to the exponential growth of our data sphere[^1]. I am also interested in topics such as IT security.
 
-[^1]: Hao, Y., Li, Q., Fan, C. and Wang, F., Data Storage Based on DNA. Small Structures, **2**, 2020.
+[^1]: Y. Hao, Q. Li, C. Fan, F. Wang, Data Storage Based on DNA, Small Structures, **2**, 2020.
